@@ -1,6 +1,7 @@
 // stores/counter.spec.ts
+import { describe, it, expect, beforeEach } from 'vitest'
 import { setActivePinia, createPinia } from 'pinia'
-import { describe, it, beforeEach } from 'vitest'
+import { useCounterStore } from './../counter'
 
 describe('Counter Store', () => {
   beforeEach(() => {
@@ -10,7 +11,16 @@ describe('Counter Store', () => {
     setActivePinia(createPinia())
   })
 
-  it('increments', () => {})
+  it('store increments', () => {
+    const counter = useCounterStore()
+    counter.increment()
+    expect(counter.count).toBe(1)
+  })
 
-  it('decrements', () => {})
+  it('store decrements', () => {
+    const counter = useCounterStore()
+    counter.decrement()
+    expect(counter.count).toBe(-1)
+  });
+
 })
