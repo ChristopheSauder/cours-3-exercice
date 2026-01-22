@@ -6,8 +6,8 @@ Ce projet contient une classe `Calculator.php` qui permet de faire des opératio
 
 ## Technologie utilisées
 
-- PHP 8.2
-- PHPUnit 10.5
+- PHP 8.5
+- PHPUnit 11.5
 
 ## Installation
 
